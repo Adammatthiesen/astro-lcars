@@ -4,6 +4,7 @@ import { defineConfig, fontProviders } from 'astro/config';
 // https://astro.build/config
 export default defineConfig({
     fonts: [{
+        // https://gtjlcars.de/LCARSindex/LCARSFONTS.htm
         provider: fontProviders.local(),
         name: "LCARSGTJ3",
         cssVariable: "--font-lcarsgtj3",

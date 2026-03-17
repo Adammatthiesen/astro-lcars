@@ -10,4 +10,5 @@ export const NAV: NavData[] = [
     { text: "Inputs", href: "/inputs", key: "inputs", color: "rust" },
     { text: "Data Tables", href: "/data-tables", key: "data-tables", color: "bourbon" },
     { text: "Custom SVGs", href: "/svgs", key: "svgs", color: "red-alert" },
+    { text: "Audio", href: "/audio", key: "audio", color: "lavender-purple" },
 ];
