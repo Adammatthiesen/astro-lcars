@@ -4,23 +4,23 @@
 
 <audio id="audDummy"></audio>
 
-<script>
+<script is:inline>
     var lcarsAudio = {
         audioExtensions: {
             ogg: "ogg",
             webm: "webm",
             mp4: "aac",
-        } as Record<string, string>,
+        },
         audioPath: "/audio/",
         audioType: "",
         //Individual Sound Element holders
-        audTactInputAcknowledge: null as HTMLAudioElement | null,
-        audTactInputAltAcknowledge: null as HTMLAudioElement | null,
-        audTactInputNegAcknowledge: null as HTMLAudioElement | null,
-        audAlert: null as HTMLAudioElement | null,
-        audRedAlert: null as HTMLAudioElement | null,
-        audReady: null as HTMLAudioElement | null,
-        initialize: function (auDummy: HTMLAudioElement) {
+        audTactInputAcknowledge: null,
+        audTactInputAltAcknowledge: null,
+        audTactInputNegAcknowledge: null,
+        audAlert: null,
+        audRedAlert: null,
+        audReady: null,
+        initialize: function (auDummy) {
             //Determine browser capability and willingness
             for (var key in this.audioExtensions) {
                 if (
@@ -63,7 +63,7 @@
                     "Audio-enabling container-contained button " +
                         button.id +
                         " " +
-                        (button as HTMLElement).innerText,
+                        button.innerText,
                 );
                 button.addEventListener("click", function () {
                     lcarsAudio.TactileInputAcknowledge();
@@ -86,7 +86,7 @@
                     "Audio-enabling button " +
                         button.id +
                         " " +
-                        (button as HTMLElement).innerText,
+                        button.innerText,
                 );
                 button.addEventListener("click", function () {
                     lcarsAudio.TactileInputAcknowledge();
@@ -100,7 +100,7 @@
                     "Audio-enabling button " +
                         button.id +
                         " " +
-                        (button as HTMLElement).innerText,
+                        button.innerText,
                 );
                 button.addEventListener("click", function () {
                     lcarsAudio.TactileInputAlternateAcknowledge();
@@ -114,7 +114,7 @@
                     "Audio-enabling button " +
                         button.id +
                         " " +
-                        (button as HTMLElement).innerText,
+                        button.innerText,
                 );
                 button.addEventListener("click", function () {
                     lcarsAudio.TactileInputNegativeAcknowledge();
@@ -126,7 +126,7 @@
                     "Audio-enabling button " +
                         button.id +
                         " " +
-                        (button as HTMLElement).innerText,
+                        button.innerText,
                 );
                 button.addEventListener("click", function () {
                     lcarsAudio.Alert();
@@ -138,7 +138,7 @@
                     "Audio-enabling button " +
                         button.id +
                         " " +
-                        (button as HTMLElement).innerText,
+                        button.innerText,
                 );
                 button.addEventListener("click", function () {
                     lcarsAudio.RedAlert();
@@ -152,7 +152,7 @@
                     "Audio-enabling range slider " +
                         button.id +
                         " " +
-                        (button as HTMLInputElement).name,
+                        button.name,
                 );
                 button.addEventListener("click", function () {
                     lcarsAudio.TactileInputAcknowledge();
@@ -185,12 +185,12 @@
             var promise = this.audReady?.play();
             if (promise !== undefined) {
                 promise
-                    .then((_: any) => {
+                    .then((_) => {
                         console.log(
                             "Sound probably just actually played, so user interaction with document status must be 'true'.",
                         );
                     })
-                    .catch((error: any) => {
+                    .catch((error) => {
                         console.warn(
                             "Autoplay was prevented. User interaction required before playback will be allowed by browser.",
                         );
@@ -217,13 +217,13 @@
 
     //=\\ Standard Wire-up
     var audDummy = document
-        .getElementById("audDummy")!
-        .appendChild(document.createElement("audio")) as HTMLAudioElement;
+        .getElementById("audDummy")
+        .appendChild(document.createElement("audio"));
     lcarsAudio.initialize(audDummy);
 
-	//All "booted" up notification. 
-	//Many browsers won't play this next sound because the user hasn't "blessed" the action with a UI click yet.
-	document.addEventListener("DOMContentLoaded", function(event) { 
-		lcarsAudio.Ready();
-	});
+    //All "booted" up notification.
+    //Many browsers won't play this next sound because the user hasn't "blessed" the action with a UI click yet.
+    document.addEventListener("DOMContentLoaded", function (event) {
+        lcarsAudio.Ready();
+    });
 </script>
