@@ -1,4 +1,5 @@
 ---
+import Divider from "../components/Divider.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -6,31 +7,33 @@ import Layout from "../layouts/Layout.astro";
 	<div class="lcars-column lcars-u-7">
 		<h1>Welcome to Astro LCARS</h1>
 
-		<hr class="lcars-dodger-blue-border" />
+		<Divider color="dodger-blue" />
 
 		<p>
-			LCARS is a purely client-side CSS and HTML framework, similar to
-			Bootstrap, Foundation, Topcoat, Brick, or Pure to create user
-			interfaces similar to a certain popular sci-fi franchise. Enjoy!
+			Astro LCARS is a demonstration of the LCARS design system
+			implemented in Astro. It is a work in progress, but it already
+			includes a number of components and layouts that can be used to
+			create LCARS-inspired user interfaces. The source code is available
+			on GitHub, and contributions are welcome.
 		</p>
 		<p>
 			There are a few requirements in terms of HTML element nesting and
 			corresponding CSS classes that are necessary for the styling to
 			apply correctly. Looking directly at the source of this
-			demonstration/documentation page should prove instructive. You might
-			even use a copy of this page as a sort of a template; just delete
-			and replace the parts you do not want.
+			demonstration should prove instructive. You might even use a copy of
+			this page as a sort of a template; just delete and replace the parts
+			you do not want.
 		</p>
 		<p>
-			Each of the following sections will specify a primary CSS class name
-			(in blue colored text) to assign to an HTML element to apply the
-			appropriate CSS styling rules to achieve the described effect. Many
-			primary classes will also have a list of secondary modifier class
-			names (in red colored text) that can be appended to the class list
-			to give additional styling options. Note that CSS classes are
-			cumulative and cascading; i.e., you can combine them and the styling
-			effects will (mostly) be inherited by the descendent nested-within
-			html elements.
+			Each of the pages and their sections will specify a primary CSS
+			class name (in blue colored text) to assign to an HTML element to
+			apply the appropriate CSS styling rules to achieve the described
+			effect. Many primary classes will also have a list of secondary
+			modifier class names (in red colored text) that can be appended to
+			the class list to give additional styling options. Note that CSS
+			classes are cumulative and cascading; i.e., you can combine them and
+			the styling effects will (mostly) be inherited by the descendent
+			nested-within html elements.
 		</p>
 	</div></Layout
 >
