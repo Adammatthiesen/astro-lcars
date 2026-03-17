@@ -35,6 +35,9 @@
     background-color inherit
     z-index -1
 
+  &.nav.active
+    background-color default-color-highlight
+
   &.left-rounded
     border-top-left-radius (base-height/2)
     border-bottom-left-radius (base-height/2)
@@ -53,10 +56,10 @@
   &.button
     cursor pointer
 
-    &.button:active // repetition for emphasis
+    &.button:hover
       background-color default-color-highlight
 
-    &.button:hover
+    &.button:active // repetition for emphasis
       background-color default-color-highlight
 
   .{prefix}element-addition

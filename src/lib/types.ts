@@ -7,5 +7,5 @@ export type NavData = {
     text: string;
     href: string;
     key: string;
-    color: LcarsColorway;
+    color?: LcarsColorway;
 }
