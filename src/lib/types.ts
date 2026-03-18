@@ -10,6 +10,9 @@ export type NavData = {
     color?: LcarsColorway;
 };
 
+/**
+ * Represents the configuration for Open Graph (OG) metadata for different pages in the LCARS-themed website. Each page is identified by its path and has associated OG title and description properties that provide information about the page when shared on social media platforms or displayed in search engine results.
+ */
 export type OGPageConfig = {
     [path: string]: {
         title: string;

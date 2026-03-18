@@ -22,13 +22,3 @@ export type LcarsBorderColors = `${LcarsColors}-border`;
  * Represents the text colors in the LCARS-themed website, defined as a template literal type that combines the base LCARS colors with a "-color" suffix to create specific text color classes that can be used throughout the design for consistent styling.
  */
 export type LcarsTextColors = `${LcarsColors}-color`;
-
-/**
- * The default color used for the LCARS-themed website, set to "lcars-dodger-blue" to provide a vibrant and visually appealing base color that aligns with the iconic LCARS design aesthetic.
- */
-export const defaultColor: LcarsColors = "lcars-dodger-blue";
-
-/**
- * The default color used for highlights in the LCARS-themed website, set to "lcars-dodger-blue-alt" to provide a visually distinct accent while maintaining the overall aesthetic of the design.
- */
-export const defaultColorHighlight: LcarsColors = "lcars-dodger-blue-alt";
