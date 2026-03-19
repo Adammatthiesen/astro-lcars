@@ -1,5 +1,6 @@
 ---
 import {
+    LICENSE,
     NAV,
     SOURCE_URL,
     getRandomLCARSLoadingMessage,
@@ -79,7 +80,8 @@ const { siteTitle, pageKey } = Astro.props;
         {/* BAR */}
         <div class="lcars-bar horizontal both-divider bottom">
             <div class="lcars-copy left">
-                MIT Licensed {new Date().getFullYear()} - {siteTitle}.
+                {LICENSE.preamble}
+                {new Date().getFullYear()} - {LICENSE.company}.
             </div>
             <div class="lcars-copy right">
                 LCARS is a copyright of CBS Studios INC. All rights reserved.
