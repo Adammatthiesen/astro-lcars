@@ -6,7 +6,7 @@
   "description": "A Star Trek LCARS themed Astro website.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Adammatthiesen/astro-lcars.git"
+    "url": "git+https://github.com/withstudiocms/astro-lcars.git"
   },
   "engines": {
     "node": ">=22.12.0"
