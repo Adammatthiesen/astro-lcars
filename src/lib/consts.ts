@@ -38,4 +38,5 @@ export const NAV: NavigationItem[] = [
     { text: "Data Tables", href: "/data-tables", key: "data-tables", color: "pale-canary" },
     { text: "Custom SVGs", href: "/svgs", key: "svgs" },
     { text: "Audio", href: "/audio", key: "audio", color: "pale-canary" },
+    { text: "Voyager Layout", href: "/voy", key: "voy" },
 ];
